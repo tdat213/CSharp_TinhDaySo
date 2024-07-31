@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             txtStart = new TextBox();
             txtEnd = new TextBox();
             label1 = new Label();
@@ -43,6 +44,8 @@
             txtTongChan = new TextBox();
             txtTongLe = new TextBox();
             btnTinh = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // txtStart
@@ -181,6 +184,10 @@
             btnTinh.UseVisualStyleBackColor = false;
             btnTinh.Click += btnTinh_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -203,6 +210,7 @@
             Controls.Add(txtStart);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -224,5 +232,6 @@
         private TextBox txtTongChan;
         private TextBox txtTongLe;
         private Button btnTinh;
+        private ErrorProvider errorProvider1;
     }
 }
